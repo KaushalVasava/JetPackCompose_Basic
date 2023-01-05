@@ -4,8 +4,11 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -13,16 +16,11 @@ import androidx.compose.ui.unit.dp
 import com.lahsuak.apps.jetpackcomposebasic.ui.theme.JetPackComposeBasicTheme
 
 /**
- * In Composable functions, state that is read or modified by multiple functions
-should live in a common ancestor—this process is called state hoisting.
-To hoist means to lift or elevate.
+ * Note: LazyColumn and LazyRow are equivalent to RecyclerView in Android Views.
 
- * Making state hoistable avoids duplicating state and introducing bugs,
-helps reuse composables, and makes composables substantially easier to test.
-Contrarily, state that doesn't need to be controlled by a composable's parent should not be hoisted.
-The source of truth belongs to whoever creates and controls that state.
+ * To display a scrollable column we use a LazyColumn.
+-> LazyColumn renders only the visible items on screen, allowing performance gains when rendering a big list.
  **/
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,9 +35,11 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MyApp(modifier: Modifier = Modifier) {
-    // shouldShowOnboarding is using a by keyword instead of the =.
-    // This is a property delegate that saves you from typing .value every time.
-    var shouldShowOnboarding by remember { mutableStateOf(true) }
+    /** PERSISTENT STATE
+    * Instead of using remember you can use rememberSaveable.
+    This will save each state surviving configuration changes (such as rotations) and process death.
+    **/
+    var shouldShowOnboarding by rememberSaveable { mutableStateOf(true) }
 
     Surface(modifier) {
         if (shouldShowOnboarding) {
@@ -50,21 +50,11 @@ fun MyApp(modifier: Modifier = Modifier) {
     }
 }
 
-/**
- * "State" and "MutableState" are interfaces that hold some value
-and trigger UI updates (recompositions) whenever that value changes.
-However you can't just assign mutableStateOf to a variable inside a composable.
- * As explained before, recomposition can happen at any time which would call the composable again,
-resetting the state to a new mutable state with a value of false.
- * To preserve state across recompositions, remember the mutable state using "remember".
-remember is used to guard against recomposition, so the state is not reset.
- */
-
 @Composable
 fun Greeting(name: String) {
-    val expanded = remember { mutableStateOf(false) }
+    var expanded by rememberSaveable { mutableStateOf(false) }
 
-    val extraPadding = if (expanded.value) 48.dp else 0.dp
+    val extraPadding = if (expanded) 48.dp else 0.dp
 
     Surface(
         color = MaterialTheme.colorScheme.primary,
@@ -80,9 +70,9 @@ fun Greeting(name: String) {
                 Text(text = name)
             }
             ElevatedButton(
-                onClick = { expanded.value = !expanded.value }
+                onClick = { expanded = !expanded }
             ) {
-                Text(if (expanded.value) "Show less" else "Show more")
+                Text(if (expanded) "Show less" else "Show more")
             }
         }
     }
@@ -91,10 +81,10 @@ fun Greeting(name: String) {
 @Composable
 private fun Greetings(
     modifier: Modifier = Modifier,
-    names: List<String> = listOf("World", "Kaushal")
+    names: List<String> = List(1000) { "item $it" }
 ) {
-    Column(modifier = modifier.padding(vertical = 4.dp)) {
-        for (name in names) {
+    LazyColumn(modifier = modifier.padding(vertical = 4.dp)) {
+        items(items = names) { name ->
             Greeting(name = name)
         }
     }
