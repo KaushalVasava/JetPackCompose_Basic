@@ -28,6 +28,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
 /***
 Composable functions :
 A composable function is a regular function annotated with @Composable.
@@ -35,10 +36,12 @@ This enables your function to call other @Composable functions within it.
 You can see how the Greeting function is marked as @Composable.
 This function will produce a piece of UI hierarchy displaying the given input,
 String. Text is a composable function provided by the library.
-***/
+ ***/
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    Surface(color = MaterialTheme.colorScheme.primary) {
+        Text(text = "Hello $name!")
+    }
 }
 
 @Preview(showBackground = true)
