@@ -5,11 +5,23 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.lahsuak.apps.jetpackcomposebasic.ui.theme.JetPackComposeBasicTheme
+
+/**
+ * In Composable functions, state that is read or modified by multiple functions
+should live in a common ancestor—this process is called state hoisting.
+To hoist means to lift or elevate.
+
+ * Making state hoistable avoids duplicating state and introducing bugs,
+helps reuse composables, and makes composables substantially easier to test.
+Contrarily, state that doesn't need to be controlled by a composable's parent should not be hoisted.
+The source of truth belongs to whoever creates and controls that state.
+ **/
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,62 +36,111 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MyApp(
-    modifier: Modifier = Modifier,
-    names: List<String> = listOf("World", "Kaushal")
-) {
-    Column(modifier = modifier.padding(vertical = 4.dp)) {
-        for (name in names) {
-            Greeting(name)
+fun MyApp(modifier: Modifier = Modifier) {
+    // shouldShowOnboarding is using a by keyword instead of the =.
+    // This is a property delegate that saves you from typing .value every time.
+    var shouldShowOnboarding by remember { mutableStateOf(true) }
+
+    Surface(modifier) {
+        if (shouldShowOnboarding) {
+            OnboardingScreen(onContinueClicked = { shouldShowOnboarding = false })
+        } else {
+            Greetings()
         }
     }
 }
 
 /**
- * Composable functions :
-A composable function is a regular function annotated with @Composable.
-This enables your function to call other @Composable functions within it.
-You can see how the Greeting function is marked as @Composable.
-This function will produce a piece of UI hierarchy displaying the given input,
-String. Text is a composable function provided by the library.
- **/
-
-/**
- * 1. Column is Vertical linear layout of view system
- * 2. Row is Horizontal linear layout of view system
- * 3. Box is FrameLayout of view system
- */
-
-/**
- * Button is a composable provided by the material3 package
-which takes a composable as the last argument.
-Since trailing lambdas can be moved outside of the parentheses,
-you can add any content to the button as a child. For example, a Text
+ * "State" and "MutableState" are interfaces that hold some value
+and trigger UI updates (recompositions) whenever that value changes.
+However you can't just assign mutableStateOf to a variable inside a composable.
+ * As explained before, recomposition can happen at any time which would call the composable again,
+resetting the state to a new mutable state with a value of false.
+ * To preserve state across recompositions, remember the mutable state using "remember".
+remember is used to guard against recomposition, so the state is not reset.
  */
 
 @Composable
 fun Greeting(name: String) {
+    val expanded = remember { mutableStateOf(false) }
+
+    val extraPadding = if (expanded.value) 48.dp else 0.dp
+
     Surface(
         color = MaterialTheme.colorScheme.primary,
         modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
     ) {
         Row(modifier = Modifier.padding(24.dp)) {
-            Column(modifier = Modifier.weight(1f)) {
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(bottom = extraPadding)
+            ) {
                 Text(text = "Hello,")
                 Text(text = name)
             }
-            ElevatedButton(onClick = { }) {
-                Text(text = "Show more")
+            ElevatedButton(
+                onClick = { expanded.value = !expanded.value }
+            ) {
+                Text(if (expanded.value) "Show less" else "Show more")
             }
         }
-
     }
 }
 
-@Preview(showBackground = true)
+@Composable
+private fun Greetings(
+    modifier: Modifier = Modifier,
+    names: List<String> = listOf("World", "Kaushal")
+) {
+    Column(modifier = modifier.padding(vertical = 4.dp)) {
+        for (name in names) {
+            Greeting(name = name)
+        }
+    }
+}
+
+// add new on-boarding screen
+@Composable
+fun OnboardingScreen(
+    onContinueClicked: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text("Welcome to the Basics Codelab!")
+        Button(
+            modifier = Modifier.padding(vertical = 24.dp),
+            onClick = onContinueClicked
+        ) {
+            Text("Continue")
+        }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 320)
 @Composable
 fun DefaultPreview() {
     JetPackComposeBasicTheme {
-        MyApp()
+        Greetings()
+    }
+}
+
+@Preview(showBackground = true, widthDp = 320, heightDp = 320)
+@Composable
+fun OnboardingPreview() {
+    JetPackComposeBasicTheme {
+        OnboardingScreen(onContinueClicked = {})
+    }
+}
+
+@Preview
+@Composable
+fun MyAppPreview() {
+    JetPackComposeBasicTheme {
+        MyApp(Modifier.fillMaxSize())
     }
 }
