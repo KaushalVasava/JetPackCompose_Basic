@@ -1,6 +1,7 @@
 package com.lahsuak.apps.jetpackcomposebasic.ui
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -13,6 +14,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
 import com.lahsuak.apps.jetpackcomposebasic.R
@@ -20,7 +22,7 @@ import com.lahsuak.apps.jetpackcomposebasic.model.News
 import com.lahsuak.apps.jetpackcomposebasic.ui.theme.JetPackComposeBasicTheme
 
 @Composable
-fun NewsItem(news: News) {
+fun NewsItem(news: News, onClick: () -> Unit) {
     val painter = rememberAsyncImagePainter(
         model = ImageRequest.Builder(LocalContext.current)
             .data(news.urlToImage)
@@ -29,7 +31,9 @@ fun NewsItem(news: News) {
             .build(),
         contentScale = ContentScale.FillWidth
     )
-    Column(modifier = Modifier.fillMaxWidth()) {
+    Column(modifier = Modifier.fillMaxWidth().clickable {
+        onClick()
+    }) {
         Image(
             painter = painter,
             contentDescription = null,
@@ -71,7 +75,7 @@ fun NewsItemPreview() {
                     "https://pixabay.com/get/gc5bde75f8a92a997aa842681d52d37e41990f5e639497bad55c1cf9921835528340e1269788a027624b201d17734fb431c5269478e54aece4e65f7581452fe98_640.jpg",
                     "https://pixabay.com/get/gc5bde75f8a92a997aa842681d52d37e41990f5e639497bad55c1cf9921835528340e1269788a027624b201d17734fb431c5269478e54aece4e65f7581452fe98_640.jpg",
                 )
-            )
+            ) {}
         }
     }
 }
