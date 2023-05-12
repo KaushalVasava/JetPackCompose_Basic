@@ -8,7 +8,8 @@ State : You will learn how state management of UI element works in compose. lean
 
 Branches Info:
 
-#1: Basic
+#1: composable_function_info
+#2: basic_ui_elements
 #2: add_surface_and_resuse_composable
 #3: add_rows_and_columns
 #4: state_of_composable
