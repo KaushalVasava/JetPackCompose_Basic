@@ -1,4 +1,4 @@
-# JetPackCompose_Basic
+# JetPackCompose Basic
 It is a basic functionality of jetpack compose UI element and how does it works.
 
 UI : You will learn how Compose basic UI element works. Like how to add image, text, list, how to scroll layout, about theme and colors, etc.
