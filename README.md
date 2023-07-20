@@ -25,16 +25,15 @@ State : You will learn how state management of UI element works in compose. lear
 - News app using these concepts and also use MVVM architecture, Rest API, Retrofit, Coil for Imageloading, Navigation, Testing API in JC. (BARNCH-NEWS_APP)
 
 # Topics?
-- What is Jetpack compose?
-Jetpack Compose is a modern toolkit for building native Android UI. Jetpack Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs.
+- What is Jetpack compose?: Jetpack Compose is a modern toolkit for building native Android UI. Jetpack Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs.
 
-# Composable functions:
+- Composable functions:
 Jetpack Compose is built around composable functions. These functions let you define your app's UI programmatically by describing how it should look and providing data dependencies, rather than focusing on the process of the UI's construction (initializing an element, attaching it to a parent, etc.). To create a composable function, just add the @Composable annotation to the function name.
 
-# Layouts: 
+- Layouts: 
 UI elements are hierarchical, with elements contained in other elements. In Compose, you build a UI hierarchy by calling composable functions from other composable functions.
 
-# Lists and animations
+- Lists and animations:
 Lists and animations are everywhere in apps. In this lesson, you will learn how Compose makes it easy to create lists and fun to add animations.
 
 # Branches Info:
