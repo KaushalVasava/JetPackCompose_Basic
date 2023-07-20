@@ -1,10 +1,41 @@
-# JetPackCompose_Basic
-It is a basic functionality of jetpack compose UI element and how does it works.
+# JetPackCompose Basic to Intermediate
 
-UI : You will learn how Compose basic UI element works. Like how to add image, text, list, how to scroll layout, about theme and colors, etc.
-State : You will learn how state management of UI element works in compose. lean about state handling 
+# Introduction
+This repository useful to learn basic to intermediate level of Jetpack compose. Jetpack compose(JC) is a modern ui development toolkit.
+It serves as a beginner-friendly project, providing an introduction to Jetpack Compose for newcomers and go upto Intermediate level.
+
+UI : You will learn how Compose basic UI element works. Like how to add image, text, list, how to scroll layout, about theming, animaations and colors, etc.
+
+State : You will learn how state management of UI element works in compose. learn about state handling 
         when configuration change, during recomposition and how to use state variable for state-hoisting to re-use 
         Stateless compose element.
+        
+# Here you will learn
+- Inbuilt composable function. (BRANCH-MAIN) 
+- What is composable function? (BRANCH-1)
+- How you can build simple and basic ui elements(composable in JC)(views in xml)? (BRANCH-1)
+- What is recomposition and How it works? (BRANCH-1)
+- What is State in JC? (BRANCH-4)
+- How you can build simple screen with these composables? (BRANCH-2)
+- How to resuse composable to build complex ui? (BRANCH-3,5)
+- What is State hoisting. (BRANCH-4)
+- What is LazyRow, LazyColumn and how it works? (ie.Recyclerview in xml) (BRANCH-5)
+- How to make animation in JC? (BRANCH-6)
+- ViewPager, Card, TabLayout in JC (BARNCH-7, BOTTOM_VIEWPAGER, TAB_LAYOUT)
+- News app using these concepts and also use MVVM architecture, Rest API, Retrofit, Coil for Imageloading, Navigation, Testing API in JC. (BARNCH-NEWS_APP)
+
+# Topics?
+- What is Jetpack compose?
+Jetpack Compose is a modern toolkit for building native Android UI. Jetpack Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs.
+
+# Composable functions:
+Jetpack Compose is built around composable functions. These functions let you define your app's UI programmatically by describing how it should look and providing data dependencies, rather than focusing on the process of the UI's construction (initializing an element, attaching it to a parent, etc.). To create a composable function, just add the @Composable annotation to the function name.
+
+# Layouts: 
+UI elements are hierarchical, with elements contained in other elements. In Compose, you build a UI hierarchy by calling composable functions from other composable functions.
+
+# Lists and animations
+Lists and animations are everywhere in apps. In this lesson, you will learn how Compose makes it easy to create lists and fun to add animations.
 
 # Branches Info:
 
