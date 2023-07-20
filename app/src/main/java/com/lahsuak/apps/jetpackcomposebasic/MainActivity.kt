@@ -9,7 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.lahsuak.apps.jetpackcomposebasic.ui.MyAppNavHost
+import com.lahsuak.apps.jetpackcomposebasic.ui.navigation.MyAppNavHost
 import com.lahsuak.apps.jetpackcomposebasic.ui.theme.JetPackComposeBasicTheme
 
 class MainActivity : ComponentActivity() {

@@ -1,7 +1,7 @@
 package com.lahsuak.apps.jetpackcomposebasic
 
 import com.lahsuak.apps.jetpackcomposebasic.api.NewApi
-import com.lahsuak.apps.jetpackcomposebasic.ui.Helper
+import com.lahsuak.apps.jetpackcomposebasic.util.AppUtil
 import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -32,7 +32,7 @@ class NewsApiTest {
         mockResponse.setBody("{}")
         mockWebServer.enqueue(mockResponse)
 
-        val response = newApi.getNews()
+        val response = newApi.getNews("general")
         mockWebServer.takeRequest()
         Assert.assertEquals(null, response.articles)
     }
@@ -40,12 +40,12 @@ class NewsApiTest {
     @Test
     fun testGetNews_returnNews() = runBlocking {
         val mockResponse = MockResponse()
-        val content = Helper.readFileResource("/test.json")
+        val content = AppUtil.readFileResource("/test.json")
         mockResponse.setResponseCode(200)
         mockResponse.setBody(content)
         mockWebServer.enqueue(mockResponse)
 
-        val response = newApi.getNews()
+        val response = newApi.getNews("general")
         mockWebServer.takeRequest()
         Assert.assertEquals(true, response.articles.isNotEmpty())
         Assert.assertEquals(2, response.articles.size)

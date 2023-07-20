@@ -1,17 +1,16 @@
-package com.lahsuak.apps.jetpackcomposebasic.ui
+package com.lahsuak.apps.jetpackcomposebasic.ui.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.lahsuak.apps.jetpackcomposebasic.model.News
-import com.lahsuak.apps.jetpackcomposebasic.ui.detailscreen.DetailScreen
-import com.lahsuak.apps.jetpackcomposebasic.ui.home.HomeScreen
-import com.lahsuak.apps.jetpackcomposebasic.ui.viewmodel.NewsViewModel
+import com.lahsuak.apps.jetpackcomposebasic.ui.screen.detailscreen.DetailScreen
+import com.lahsuak.apps.jetpackcomposebasic.ui.screen.home.HomeScreen
 
+private const val NEWS_ARG = "news"
 @Composable
 fun MyAppNavHost(
     modifier: Modifier = Modifier,
@@ -24,16 +23,17 @@ fun MyAppNavHost(
         startDestination = startDestination
     ) {
         composable(NavigationItem.Home.route) {
-            val newsViewModel: NewsViewModel = viewModel()
-            newsViewModel.getNews("general")
-            HomeScreen(
-                navController, newsViewModel
-            )
+            HomeScreen {
+                navController.currentBackStackEntry?.savedStateHandle?.set(NEWS_ARG, it)
+                navController.navigate(State.DETAILS.name)
+            }
         }
         composable(NavigationItem.Details.route) {
             val news =
-                navController.previousBackStackEntry?.savedStateHandle?.get<News>("news")
-            DetailScreen(text = news?.url?:"")
+                navController.previousBackStackEntry?.savedStateHandle?.get<News>(NEWS_ARG)
+            news?.let {
+                DetailScreen(it,navController)
+            }
         }
     }
 }

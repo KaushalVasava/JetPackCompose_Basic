@@ -8,7 +8,7 @@ import com.lahsuak.apps.jetpackcomposebasic.model.NewsParentModel
 class NewsRepository(private val apiInterface: NewApi= ApiClient.apiInterface) {
     suspend fun getNews(category: String): NewsParentModel {
         return apiInterface.getNews(
-//            category
+            category
         )
     }
 }

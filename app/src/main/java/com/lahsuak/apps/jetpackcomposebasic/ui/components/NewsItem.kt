@@ -1,8 +1,13 @@
-package com.lahsuak.apps.jetpackcomposebasic.ui
+package com.lahsuak.apps.jetpackcomposebasic.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -14,7 +19,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
 import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
 import com.lahsuak.apps.jetpackcomposebasic.R
@@ -23,6 +27,7 @@ import com.lahsuak.apps.jetpackcomposebasic.ui.theme.JetPackComposeBasicTheme
 
 @Composable
 fun NewsItem(news: News, onClick: () -> Unit) {
+    // coil image painter
     val painter = rememberAsyncImagePainter(
         model = ImageRequest.Builder(LocalContext.current)
             .data(news.urlToImage)
@@ -31,30 +36,36 @@ fun NewsItem(news: News, onClick: () -> Unit) {
             .build(),
         contentScale = ContentScale.FillWidth
     )
-    Column(modifier = Modifier.fillMaxWidth().clickable {
-        onClick()
-    }) {
-        Image(
-            painter = painter,
-            contentDescription = null,
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(200.dp),
-        )
-        Text(
-            text = news.title,
-            style = MaterialTheme.typography.bodyMedium,
-            maxLines = 1,
-            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
-        )
-        Text(
-            text = news.description,
-            style = MaterialTheme.typography.bodySmall,
-            maxLines = 3,
-            overflow = TextOverflow.Ellipsis,
-            color = Color.Gray,
-            modifier = Modifier.padding(horizontal = 8.dp)
-        )
+    Card(modifier = Modifier
+        .fillMaxWidth()
+        .padding(vertical = 4.dp)
+        .clickable {
+            onClick()
+        }) {
+        Column() {
+            Image(
+                painter = painter,
+                contentDescription = null,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(200.dp),
+                contentScale = ContentScale.Crop
+            )
+            Text(
+                text = news.title,
+                style = MaterialTheme.typography.bodyMedium,
+                maxLines = 1,
+                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+            )
+            Text(
+                text = news.description,
+                style = MaterialTheme.typography.bodySmall,
+                maxLines = 3,
+                overflow = TextOverflow.Ellipsis,
+                color = Color.Gray,
+                modifier = Modifier.padding(start = 8.dp, end = 8.dp, bottom = 8.dp)
+            )
+        }
     }
 }
 

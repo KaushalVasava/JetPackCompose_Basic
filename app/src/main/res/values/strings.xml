@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">JetPackCompose Basic</string>
+    <string name="open_for_more">Click here to see news in detail</string>
+    <string name="label_filters">Filter</string>
 </resources>

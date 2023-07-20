@@ -13,10 +13,10 @@ interface NewApi {
         const val BASE_URL = "https://saurav.tech"//NewsAPI/top-headlines/category/general/in.json"
     }
 
-    @GET("/NewsAPI/top-headlines/category/general/in.json")
+    @GET("/NewsAPI/top-headlines/category/{category}/in.json")
     suspend fun getNews(
-//        @Path("category")
-//        category: String
+        @Path("category")
+        category: String
     ): NewsParentModel
 
     @GET("/NewsAPI/top-headlines/category/general/in.json")
