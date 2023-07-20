@@ -83,6 +83,12 @@ Tab layout in Jetpack compose.
 
 #news-app:
 News app using Retrofit, MVVM architecture, Compose, Navigation, Lazy list  etc.
+# Screenshots 
+![Screenshot_2023-07-20-22-40-57-132_com lahsuak apps jetpackcomposebasic](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/8dd37cc0-45fe-42a4-b9e0-f598adbf2ba7)
+![Screenshot_2023-07-20-22-40-52-894_com lahsuak apps jetpackcomposebasic](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/07bc6301-dc44-46d4-a5f6-e667f86481a2)
+![Screenshot_2023-07-20-22-41-19-897_com lahsuak apps jetpackcomposebasic](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/f560be8b-6ddc-4d9a-8b3e-99ac0bcffcd4)
+
+https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/b28eeb2a-fb6a-43bd-9823-dedb83f4cfab
 
 # Android component used:
 - Jepack compose for UI development
