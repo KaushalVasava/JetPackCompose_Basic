@@ -24,18 +24,31 @@ State : You will learn how state management of UI element works in compose. lear
 - ViewPager, Card, TabLayout in JC (BARNCH-7, BOTTOM_VIEWPAGER, TAB_LAYOUT)
 - News app using these concepts and also use MVVM architecture, Rest API, Retrofit, Coil for Imageloading, Navigation, Testing API in JC. (BARNCH-NEWS_APP)
 
-# Topics?
-- What is Jetpack compose?: Jetpack Compose is a modern toolkit for building native Android UI. Jetpack Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs.
+# Topics
+- What is Jetpack compose?:
+
+   Jetpack Compose is a modern toolkit for building native Android UI. Jetpack Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs.
 
 - Composable functions:
-Jetpack Compose is built around composable functions. These functions let you define your app's UI programmatically by describing how it should look and providing data dependencies, rather than focusing on the process of the UI's construction (initializing an element, attaching it to a parent, etc.). To create a composable function, just add the @Composable annotation to the function name.
 
-- Layouts: 
-UI elements are hierarchical, with elements contained in other elements. In Compose, you build a UI hierarchy by calling composable functions from other composable functions.
+    Jetpack Compose is built around composable functions. These functions let you define your app's UI programmatically by describing how it should look and providing data dependencies, rather than focusing on the process of the UI's construction (initializing an element, attaching it to a parent, etc.). To create a composable function, just add the @Composable annotation to the function name.
+More info 👉 https://developer.android.com/jetpack/compose/tutorial#lesson-1:-composable-functions
+
+- Layouts:
+
+    UI elements are hierarchical, with elements contained in other elements. In Compose, you build a UI hierarchy by calling composable functions from other composable functions.
 
 - Lists and animations:
-Lists and animations are everywhere in apps. In this lesson, you will learn how Compose makes it easy to create lists and fun to add animations.
 
+    Lists and animations are everywhere in apps. In this lesson, you will learn how Compose makes it easy to create lists and fun to add animations.
+More info 👉 https://developer.android.com/jetpack/compose/lists
+
+- Navigation:
+
+     The Navigation component provides support for Jetpack Compose applications. You can navigate between composables while taking advantage of the Navigation component’s infrastructure and features.
+  
+     More info 👉 https://developer.android.com/jetpack/compose/navigation
+  
 # Branches Info:
 
 #basic_ui_elements : 
@@ -63,13 +76,25 @@ Add animation when composable element state changes.
 Add Card composable or custom composable to maek UI better.
 
 #bottom_viewpager: 
-It is a viewpager in jetpack compose.
-
-#news-app:
-News app using retrofit, MVVM architecture etc.
+It is a viewpager in Jetpack compose.
 
 #tab-layout: 
 Tab layout in Jetpack compose.
 
-Thank you 
-Kaushal Vasava.
+#news-app:
+News app using Retrofit, MVVM architecture, Compose, Navigation, Lazy list  etc.
+
+# Android component used:
+- Jepack compose for UI development
+- Kotlin for programming
+- MVVM architecture
+- Coil library for dynamic Image loading
+- Retrofit for REST API data consuming
+- Jetpack compose Navigation
+- Lazy list, Card, Other composable functions
+- Unit Testing of API
+
+Author: 
+Kaushal Vasava
+
+If you like my work then Follow me on LinkedInm  Twitter, Add to Favorite on Github for more information related to app development, Kotlin, etc.
