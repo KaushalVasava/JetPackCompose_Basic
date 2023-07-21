@@ -13,8 +13,8 @@ State : You will learn how state management of UI element works in compose. lear
 # Here you will learn
 - Inbuilt composable function. (BRANCH-MAIN) 
 - What is composable function? (BRANCH-1)
-- How you can build simple and basic ui elements(composable in JC)(views in xml)? (BRANCH-1)
-- What is recomposition and How it works? (BRANCH-1)
+- How you can build simple and basic ui elements(composable in JC)(views in xml)? (BRANCH-3)
+- What is recomposition and How it works? (BRANCH-3)
 - What is State in JC? (BRANCH-4)
 - How you can build simple screen with these composables? (BRANCH-2)
 - How to resuse composable to build complex ui? (BRANCH-3,5)
