@@ -11,18 +11,18 @@ State : You will learn how state management of UI element works in compose. lear
         Stateless compose element.
         
 # Here you will learn
-- Inbuilt composable function. (BRANCH-MAIN) 
+- Inbuilt composable function. (BRANCH-MASTER) 
 - What is composable function? (BRANCH-1)
 - How you can build simple and basic ui elements(composable in JC)(views in xml)? (BRANCH-3)
+- How you can build simple screen with these composables? (BRANCH-3)
 - What is recomposition and How it works? (BRANCH-4)
 - What is State in JC? (BRANCH-4)
-- How you can build simple screen with these composables? (BRANCH-3)
 - What is State hoisting. (BRANCH-4)
 - - How to resuse composable to build complex ui? (BRANCH-3,4,5)
 - What is LazyRow, LazyColumn and how it works? (ie.Recyclerview in xml) (BRANCH-5)
 - How to make animation in JC? (BRANCH-6)
-- ViewPager, Card, TabLayout in JC (BARNCH-7, BOTTOM_VIEWPAGER, TAB_LAYOUT)
-- News app using these concepts and also use MVVM architecture, Rest API, Retrofit, Coil for Imageloading, Navigation, Testing API in JC. (BARNCH-NEWS_APP)
+- ViewPager, Card, TabLayout in JC (BRANCH-7, BOTTOM_VIEWPAGER, TAB_LAYOUT)
+- News app using these concepts and also use MVVM architecture, Rest API, Retrofit, Coil for Imageloading, Navigation, Testing API in JC. (BRANCH-NEWS_APP)
 
 # Topics
 - What is Jetpack compose?:
