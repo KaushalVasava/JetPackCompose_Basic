@@ -17,7 +17,7 @@ State : You will learn how state management of UI element works in compose. lear
 - What is recomposition and How it works? (BRANCH-4)
 - What is State in JC? (BRANCH-4)
 - What is State hoisting. (BRANCH-4)
-- - How to resuse composable to build complex ui? (BRANCH-3,4,5)
+- How to resuse composable to build complex ui? (BRANCH-3,4,5)
 - What is LazyRow, LazyColumn and how it works? (ie.Recyclerview in xml) (BRANCH-5)
 - How to make animation in JC? (BRANCH-6)
 - ViewPager, Card, TabLayout in JC (BRANCH-7, BOTTOM_VIEWPAGER, TAB_LAYOUT)
