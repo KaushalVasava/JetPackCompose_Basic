@@ -50,14 +50,8 @@ More info 👉 https://developer.android.com/jetpack/compose/lists
   
 # Branches Info:
 
-#basic_ui_elements : 
-Add basic compose elements like searchview, radiobutton,checkbox, edittext, textview, etc.
-
 #1_composable_function_info : 
 How composable function works is show in this branch code and how recomposition works in jetpack compose.
-
-#2_add_surface_and_resuse_composable :
-Add Surface composable function and how to reuse composable function to make code light weight and clean.
 
 #3_add_rows_and_columns: 
 Add Row and colomn to create complex layout in compose.
@@ -82,6 +76,7 @@ Tab layout in Jetpack compose.
 
 #news-app:
 News app using Retrofit, MVVM architecture, Compose, Navigation, Lazy list  etc.
+
 # Screenshots 
 ![Screenshot_2023-07-20-22-40-57-132_com lahsuak apps jetpackcomposebasic](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/8dd37cc0-45fe-42a4-b9e0-f598adbf2ba7)
 ![Screenshot_2023-07-20-22-40-52-894_com lahsuak apps jetpackcomposebasic](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/07bc6301-dc44-46d4-a5f6-e667f86481a2)
