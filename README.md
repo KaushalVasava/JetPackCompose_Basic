@@ -22,6 +22,7 @@ State : You will learn how state management of UI element works in compose. lear
 - How to make animation in JC? (BRANCH-6)
 - ViewPager, Card, TabLayout in JC (BRANCH-7, BOTTOM_VIEWPAGER, TAB_LAYOUT)
 - News app using these concepts and also use MVVM architecture, Rest API, Retrofit, Coil for Imageloading, Navigation, Testing API in JC. (BRANCH-NEWS_APP)
+- How to create Widget in Jetpack Compose? (BRANCH- ADD_WIDGET)
 
 # Topics
 - What is Jetpack compose?:
@@ -76,6 +77,9 @@ Tab layout in Jetpack compose.
 
 #news-app:
 News app using Retrofit, MVVM architecture, Compose, Navigation, Lazy list  etc.
+
+#add_widget:
+Create Simple counter widget in JC.
 
 # Screenshots 
 ![Screenshot_2023-07-20-22-40-57-132_com lahsuak apps jetpackcomposebasic](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/8dd37cc0-45fe-42a4-b9e0-f598adbf2ba7)
