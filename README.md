@@ -75,11 +75,20 @@ It is a viewpager in Jetpack compose.
 #tab-layout: 
 Tab layout in Jetpack compose.
 
-#news-app:
-News app using Retrofit, MVVM architecture, Compose, Navigation, Lazy list  etc.
-
 #add_widget:
 Create Simple counter widget in JC.
+
+#bottom_nav_bar:
+Created botttom navigation bar.
+
+#meditation_ui
+Created complex UI
+
+#timer
+Created timer app
+
+#news-app:
+News app using Retrofit, MVVM architecture, Compose, Navigation, Lazy list  etc.
 
 # Screenshots 
 ![Screenshot_2023-07-20-22-40-57-132_com lahsuak apps jetpackcomposebasic](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/8dd37cc0-45fe-42a4-b9e0-f598adbf2ba7)
@@ -102,4 +111,4 @@ https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/b28eeb2a-f
 Author: 
 Kaushal Vasava
 
-If you like my work then Follow me on LinkedInm  Twitter, Add to Favorite on Github for more information related to app development, Kotlin, etc.
+If you like my work then Follow me on LinkedIn, Twitter for more information related to app development, Kotlin, etc and Add to Favorite on Github .
