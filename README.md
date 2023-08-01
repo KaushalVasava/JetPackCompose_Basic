@@ -52,7 +52,7 @@ More info 👉 https://developer.android.com/jetpack/compose/lists
   
      More info 👉 https://developer.android.com/jetpack/compose/navigation
   
-# Branches Info, Screenshots & Video :
+# Branches Info:
 
 #1_composable_function_info : 
 How composable function works is show in this branch code and how recomposition works in jetpack compose.
