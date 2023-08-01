@@ -52,7 +52,7 @@ More info 👉 https://developer.android.com/jetpack/compose/lists
   
      More info 👉 https://developer.android.com/jetpack/compose/navigation
   
-# Branches Info:
+# Branches Info, Screenshots & Video :
 
 #1_composable_function_info : 
 How composable function works is show in this branch code and how recomposition works in jetpack compose.
@@ -78,6 +78,9 @@ It is a viewpager in Jetpack compose.
 #tab-layout: 
 Tab layout in Jetpack compose.
 
+#Constraint-layout:
+Use Constaint layout to make Indian flag.
+
 #add_widget:
 Create Simple counter widget in JC.
 
@@ -93,15 +96,28 @@ Created timer app
 #news-app:
 News app using Retrofit, MVVM architecture, Compose, Navigation, Lazy list  etc.
 
-# Screenshots 
+#Screenshots & Videos: 
+
 ![Screenshot_2023-07-20-22-40-57-132_com lahsuak apps jetpackcomposebasic](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/8dd37cc0-45fe-42a4-b9e0-f598adbf2ba7)
 ![Screenshot_2023-07-20-22-40-52-894_com lahsuak apps jetpackcomposebasic](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/07bc6301-dc44-46d4-a5f6-e667f86481a2)
 ![Screenshot_2023-07-20-22-41-19-897_com lahsuak apps jetpackcomposebasic](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/f560be8b-6ddc-4d9a-8b3e-99ac0bcffcd4)
 ![Screenshot 2023-07-25 155236](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/249576b5-e9f5-4d04-9f10-0f032b02693c)
+![Screenshot 2023-08-01 185044](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/9c6019df-8195-41ee-8a7d-0e8df8bd1f3d)
+
+
+https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/7e92754d-b7d8-4b93-bdf2-5b06d30c2d00
 
 https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/b28eeb2a-fb6a-43bd-9823-dedb83f4cfab
 
-# Android component used:
+https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/b77cb850-f710-4155-9500-961bca5413eb
+
+https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/2cf7f449-08f7-4973-a8f0-46e7b5dcc4f8
+
+https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/2ec0b2f2-5ecd-43f7-ac8a-77d092664cf2
+
+[Screen_recording_20230801_184816.webm](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/1efc21d0-e5db-4d2c-b7e3-aeb67ff19235)
+
+# Android components used:
 - Jetpack compose for UI development
 - Kotlin for programming
 - MVVM architecture
