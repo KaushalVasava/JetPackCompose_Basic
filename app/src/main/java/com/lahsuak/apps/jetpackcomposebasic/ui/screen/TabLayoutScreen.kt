@@ -1,6 +1,15 @@
 package com.lahsuak.apps.jetpackcomposebasic.ui.screen
 
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateDp
+import androidx.compose.animation.core.animateIntAsState
+import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.core.updateTransition
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
@@ -19,17 +28,30 @@ import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import com.lahsuak.apps.jetpackcomposebasic.model.TabItem
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
 fun TabLayoutScreen() {
-    val pagerState = rememberPagerState()
+    val pagerState = rememberPagerState(
+        initialPage = 0,
+        initialPageOffsetFraction = 0f
+    ) {
+        tabs.size
+    }
+    val selectedIndex = animateIntAsState(
+        targetValue = pagerState.currentPage, label = "selection",
+    )
     val coroutineScope = rememberCoroutineScope()
-
+    val backgroundColor by animateColorAsState(if (tabs[pagerState.currentPage] == tabs[0])
+        Color.Yellow else if (tabs[pagerState.currentPage] == tabs[1]) Color.Red else Color.Green,
+        label = "color"
+    )
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
@@ -45,7 +67,8 @@ fun TabLayoutScreen() {
             modifier = Modifier.padding(paddingValues)
         ) {
             TabRow(
-                selectedTabIndex = pagerState.currentPage,
+                selectedTabIndex = selectedIndex.value,
+
             ) {
                 tabs.forEachIndexed { index, item ->
                     Tab(
@@ -57,8 +80,8 @@ fun TabLayoutScreen() {
                 }
             }
             HorizontalPager(
-                pageCount = tabs.size,
-                state = pagerState
+                state = pagerState,
+                modifier = Modifier.background(backgroundColor)
             ) {
                 tabs[pagerState.currentPage].screen()
             }
