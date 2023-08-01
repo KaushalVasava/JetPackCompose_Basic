@@ -96,6 +96,16 @@ Created timer app
 #news-app:
 News app using Retrofit, MVVM architecture, Compose, Navigation, Lazy list  etc.
 
+# Android components used:
+- Jetpack compose for UI development
+- Kotlin for programming
+- MVVM architecture
+- Coil library for dynamic Image loading
+- Retrofit for REST API data consuming
+- Jetpack compose Navigation
+- Lazy list, Card, Other composable functions
+- Unit Testing of API
+
 #Screenshots & Videos: 
 
 ![Screenshot_2023-07-20-22-40-57-132_com lahsuak apps jetpackcomposebasic](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/8dd37cc0-45fe-42a4-b9e0-f598adbf2ba7)
@@ -116,16 +126,6 @@ https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/2cf7f449-0
 https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/2ec0b2f2-5ecd-43f7-ac8a-77d092664cf2
 
 [Screen_recording_20230801_184816.webm](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/1efc21d0-e5db-4d2c-b7e3-aeb67ff19235)
-
-# Android components used:
-- Jetpack compose for UI development
-- Kotlin for programming
-- MVVM architecture
-- Coil library for dynamic Image loading
-- Retrofit for REST API data consuming
-- Jetpack compose Navigation
-- Lazy list, Card, Other composable functions
-- Unit Testing of API
 
 Author: 
 Kaushal Vasava
