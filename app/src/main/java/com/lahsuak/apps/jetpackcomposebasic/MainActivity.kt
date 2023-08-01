@@ -60,7 +60,6 @@ fun MyApp(modifier: Modifier = Modifier) {
 
 @Composable
 fun Greeting(name: String) {
-
     Card(
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.primary
