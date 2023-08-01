@@ -21,8 +21,11 @@ State : You will learn how state management of UI element works in compose. lear
 - What is LazyRow, LazyColumn and how it works? (ie.Recyclerview in xml) (BRANCH-5)
 - How to make animation in JC? (BRANCH-6)
 - ViewPager, Card, TabLayout in JC (BRANCH-7, BOTTOM_VIEWPAGER, TAB_LAYOUT)
-- News app using these concepts and also use MVVM architecture, Rest API, Retrofit, Coil for Image loading, Navigation, Testing API in JC. (BRANCH-NEWS_APP)
 - How to create Widget in Jetpack Compose? (BRANCH- ADD_WIDGET)
+- How to create bottom navigation bar in Jetpack compose? (BRANCH - bottom_nav)
+- How to create simple timer app with canvas? (BRANCH - timer)
+- Build complex mediation ui. (BRANCH - meditation_ui)
+- News app using these concepts and also use MVVM architecture, Rest API, Retrofit, Coil for Image loading, Navigation, Testing API in JC. (BRANCH-NEWS_APP)
 
 # Topics
 - What is Jetpack compose?:
@@ -81,10 +84,10 @@ Create Simple counter widget in JC.
 #bottom_nav_bar:
 Created botttom navigation bar.
 
-#meditation_ui
+#meditation_ui:
 Created complex UI
 
-#timer
+#timer:
 Created timer app
 
 #news-app:
