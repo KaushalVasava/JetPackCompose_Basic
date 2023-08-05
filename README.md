@@ -26,6 +26,7 @@ State : You will learn how state management of UI element works in compose. lear
 - How to create simple timer app with canvas? (BRANCH - timer)
 - Build complex mediation ui. (BRANCH - meditation_ui)
 - News app using these concepts and also use MVVM architecture, Rest API, Retrofit, Coil for Image loading, Navigation, Testing API in JC. (BRANCH-NEWS_APP)
+- Add Text style using shape and animation to text. (BRANCH - text-styling)
 
 # Topics
 - What is Jetpack compose?:
@@ -96,6 +97,9 @@ Created timer app
 #news-app:
 News app using Retrofit, MVVM architecture, Compose, Navigation, Lazy list  etc.
 
+#text-styling
+Add Text stlying and animations
+
 # Android components used:
 - Jetpack compose for UI development
 - Kotlin for programming
@@ -114,6 +118,7 @@ News app using Retrofit, MVVM architecture, Compose, Navigation, Lazy list  etc.
 ![Screenshot 2023-07-25 155236](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/249576b5-e9f5-4d04-9f10-0f032b02693c)
 ![Screenshot 2023-08-01 185044](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/9c6019df-8195-41ee-8a7d-0e8df8bd1f3d)
 
+https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/6de7f19b-e2b5-48ab-a7c0-ec46d593e3cb
 
 https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/7e92754d-b7d8-4b93-bdf2-5b06d30c2d00
 
