@@ -1,18 +1,24 @@
 package com.lahsuak.apps.jetpackcomposebasic
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.lahsuak.apps.jetpackcomposebasic.ui.navhost.AppNavHost
+import com.lahsuak.apps.jetpackcomposebasic.ui.screen.HomeScreen
 import com.lahsuak.apps.jetpackcomposebasic.ui.theme.JetPackComposeBasicTheme
+import com.lahsuak.apps.jetpackcomposebasic.ui.viewmodel.MainViewModel
 
 class MainActivity : ComponentActivity() {
+
+    private val viewModel = MainViewModel()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -22,29 +28,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    AppNavHost(navController = rememberNavController(), viewModel = viewModel)
                 }
             }
         }
-    }
-}
-/***
-Composable functions :
-A composable function is a regular function annotated with @Composable.
-This enables your function to call other @Composable functions within it.
-You can see how the Greeting function is marked as @Composable.
-This function will produce a piece of UI hierarchy displaying the given input,
-String. Text is a composable function provided by the library.
-***/
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    JetPackComposeBasicTheme {
-        Greeting("Android")
     }
 }
