@@ -27,7 +27,8 @@ State : You will learn how state management of UI element works in compose. lear
 - Build complex mediation ui. (BRANCH - meditation_ui)
 - News app using these concepts and also use MVVM architecture, Rest API, Retrofit, Coil for Image loading, Navigation, Testing API in JC. (BRANCH-NEWS_APP)
 - Add Text style using shape and animation to text. (BRANCH - text-styling)
-
+- Navigate back with next screen to previous screen. (BRANCH - navigate-back-with-result)
+  
 # Topics
 - What is Jetpack compose?:
 
@@ -50,11 +51,25 @@ More info 👉 https://developer.android.com/jetpack/compose/lists
 - Navigation:
 
      The Navigation component provides support for Jetpack Compose applications. You can navigate between composable while taking advantage of the Navigation component’s infrastructure and features.
-  
-     More info 👉 https://developer.android.com/jetpack/compose/navigation
-  
-# Branches Info:
 
+     More info 👉 https://developer.android.com/jetpack/compose/navigation
+
+# Android components used:
+- Jetpack compose for UI development
+- Kotlin for programming
+- MVVM architecture
+- Coil library for dynamic Image loading
+- Retrofit for REST API data consuming
+- Jetpack compose Navigation
+- Lazy list, Card, Other composable functions
+- Unit Testing of API
+- Animations
+- Viewpager
+- Bottomsheet
+- Tab layout
+- State managements
+
+# Branches Info:
 #1_composable_function_info : 
 How composable function works is show in this branch code and how recomposition works in jetpack compose.
 
@@ -100,17 +115,10 @@ News app using Retrofit, MVVM architecture, Compose, Navigation, Lazy list  etc.
 #text-styling
 Add Text stlying and animations
 
-# Android components used:
-- Jetpack compose for UI development
-- Kotlin for programming
-- MVVM architecture
-- Coil library for dynamic Image loading
-- Retrofit for REST API data consuming
-- Jetpack compose Navigation
-- Lazy list, Card, Other composable functions
-- Unit Testing of API
+#navigate-back-with-result
+Navigate back with next screen to previous screen
 
-#Screenshots & Videos: 
+# Screenshots & Videos: 
 
 ![Screenshot_2023-07-20-22-40-57-132_com lahsuak apps jetpackcomposebasic](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/8dd37cc0-45fe-42a4-b9e0-f598adbf2ba7)
 ![Screenshot_2023-07-20-22-40-52-894_com lahsuak apps jetpackcomposebasic](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/07bc6301-dc44-46d4-a5f6-e667f86481a2)
@@ -118,24 +126,42 @@ Add Text stlying and animations
 ![Screenshot 2023-07-25 155236](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/249576b5-e9f5-4d04-9f10-0f032b02693c)
 ![Screenshot 2023-08-01 185044](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/9c6019df-8195-41ee-8a7d-0e8df8bd1f3d)
 
-https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/6de7f19b-e2b5-48ab-a7c0-ec46d593e3cb
+Lazy column with animations
 
 https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/7e92754d-b7d8-4b93-bdf2-5b06d30c2d00
 
+NewsApp
+
 https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/b28eeb2a-fb6a-43bd-9823-dedb83f4cfab
+
+Timer
 
 https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/b77cb850-f710-4155-9500-961bca5413eb
 
+Bottom Navigation Bar
+
 https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/2cf7f449-08f7-4973-a8f0-46e7b5dcc4f8
+
+Tab layout
 
 https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/2ec0b2f2-5ecd-43f7-ac8a-77d092664cf2
 
+Viewpager 
+
 [Screen_recording_20230801_184816.webm](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/1efc21d0-e5db-4d2c-b7e3-aeb67ff19235)
+
+Text Styling
+
+https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/6de7f19b-e2b5-48ab-a7c0-ec46d593e3cb
+
+Navigate back with result
+
+https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/1d96d44f-66e1-4f3b-bba1-2844ab6553cc
 
 # Contribution
 You can contribute this project. Just Solve issue or update code and raise PR. I'll do code review and merge your changes into main branch. See Commit message guidelines https://initialcommit.com/blog/git-commit-messages-best-practices
 
-#Licence
+# Licence
 Copyright 2023 Kaushal Vasava
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
