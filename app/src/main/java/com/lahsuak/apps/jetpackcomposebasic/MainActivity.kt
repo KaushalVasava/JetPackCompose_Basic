@@ -3,13 +3,17 @@ package com.lahsuak.apps.jetpackcomposebasic
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.lahsuak.apps.jetpackcomposebasic.ui.theme.JetPackComposeBasicTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,20 +26,23 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    LongPressDraggable(modifier = Modifier.fillMaxSize()) {
+                        LazyColumn(
+                            modifier = Modifier.fillMaxSize(),
+                            contentPadding = PaddingValues(horizontal = 10.dp)
+                        ) {
+                            items(items = foodList) { food ->
+                                FoodItemCard(foodItem = food)
+                            }
+                        }
+                        PersonListContainer()
+                    }
                 }
             }
         }
     }
 }
-/***
-Composable functions :
-A composable function is a regular function annotated with @Composable.
-This enables your function to call other @Composable functions within it.
-You can see how the Greeting function is marked as @Composable.
-This function will produce a piece of UI hierarchy displaying the given input,
-String. Text is a composable function provided by the library.
-***/
+
 @Composable
 fun Greeting(name: String) {
     Text(text = "Hello $name!")
