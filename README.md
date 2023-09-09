@@ -28,6 +28,7 @@ State : You will learn how state management of UI element works in compose. lear
 - News app using these concepts and also use MVVM architecture, Rest API, Retrofit, Coil for Image loading, Navigation, Testing API in JC. (BRANCH-NEWS_APP)
 - Add Text style using shape and animation to text. (BRANCH - text-styling)
 - Navigate back with next screen to previous screen. (BRANCH - navigate-back-with-result)
+- How to implement Drag-N-Drop in Jetpack compose. (BRANCH- drag-and-drop)
   
 # Topics
 - What is Jetpack compose?:
@@ -68,6 +69,7 @@ More info 👉 https://developer.android.com/jetpack/compose/lists
 - Bottomsheet
 - Tab layout
 - State managements
+- Drag-Drop
 
 # Branches Info:
 #1_composable_function_info : 
@@ -118,6 +120,10 @@ Add Text stlying and animations
 #navigate-back-with-result
 Navigate back with next screen to previous screen
 
+#drag-and-drop
+Drag and Drop Functionality
+more info: https://developer.android.com/jetpack/compose/touch-input/pointer-input/drag-swipe-fling
+
 # Screenshots & Videos: 
 
 ![Screenshot_2023-07-20-22-40-57-132_com lahsuak apps jetpackcomposebasic](https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/8dd37cc0-45fe-42a4-b9e0-f598adbf2ba7)
@@ -157,6 +163,11 @@ https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/6de7f19b-e
 Navigate back with result
 
 https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/1d96d44f-66e1-4f3b-bba1-2844ab6553cc
+
+Drag-n-Drop
+
+https://github.com/KaushalVasava/JetPackCompose_Basic/assets/49050597/2106c5e9-cd1b-41e0-a721-e481c258756d
+
 
 # Contribution
 You can contribute this project. Just Solve issue or update code and raise PR. I'll do code review and merge your changes into main branch. See Commit message guidelines https://initialcommit.com/blog/git-commit-messages-best-practices
