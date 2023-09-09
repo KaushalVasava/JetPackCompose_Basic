@@ -98,7 +98,7 @@ fun PersonCard(person: Person) {
                 modifier = Modifier
                     .size(70.dp)
                     .clip(CircleShape),
-                contentScale = ContentScale.Crop
+                contentScale = ContentScale.Fit
             )
 
             Spacer(modifier = Modifier.height(10.dp))

@@ -10,9 +10,9 @@ data class FoodItem(
 )
 
 val foodList = listOf(
-    FoodItem(1, "Pizza", 20.0, R.drawable.food_pizza),
-    FoodItem(2, "French toast", 10.05, R.drawable.food_toast),
-    FoodItem(3, "Chocolate cake", 12.99, R.drawable.food_cake),
+    FoodItem(1, "Pizza", 20.0, R.drawable.food1),
+    FoodItem(2, "French toast", 10.05, R.drawable.foo2),
+    FoodItem(3, "Chocolate cake", 12.99, R.drawable.food3),
 )
 
 data class Person(
@@ -22,7 +22,7 @@ data class Person(
 )
 
 val persons = listOf(
-    Person(1, "John", R.drawable.user_one),
-    Person(2, "Anderson", R.drawable.user_two),
-    Person(3, "Tommy", R.drawable.user_three),
+    Person(1, "Kaushal", R.drawable.person1),
+    Person(2, "Jigar", R.drawable.person2),
+    Person(3, "John", R.drawable.person3),
 )
