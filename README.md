@@ -1,7 +1,7 @@
 # JetPackCompose Basic to Intermediate
 
 # Introduction
-This repository useful to learn basic to intermediate level of Jetpack compose. Jetpack compose(JC) is a modern ui development toolkit.
+This repository useful to learn basic to intermediate level of Jetpack compose. Jetpack compose(JC) is a modern UI development toolkit.
 It serves as a beginner-friendly project, providing an introduction to Jetpack Compose for newcomers and go up to Intermediate level.
 
 UI : You will learn how Compose basic UI element works. Like how to add image, text, list, how to scroll layout, about theming, animations and colors, etc.
